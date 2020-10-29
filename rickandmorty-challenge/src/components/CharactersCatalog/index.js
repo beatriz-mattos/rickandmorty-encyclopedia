@@ -1,4 +1,5 @@
 import CharacterCard from "../CharacterCard";
+//import { getCharacters } from "../../graphql/requests";
 
 function CharactersCatalog() {
     return (
