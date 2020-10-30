@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import Modal from "@material-ui/core/Modal";
 import { makeStyles } from "@material-ui/core/styles";
+import Modal from "@material-ui/core/Modal";
+import styled from "styled-components";
 
 export const Logo = styled.img`
   max-width: 50%;
@@ -9,7 +9,7 @@ export const Logo = styled.img`
 `;
 
 export const ImageCard = styled.img`
-border-radius: 15px 15px 0px 0px;
+  border-radius: 15px 15px 0px 0px;
   width: 100%;
   min-width: 100%;
 `;
@@ -25,6 +25,7 @@ export const ContainerCard = styled.div`
   border-radius: 15px;
   opacity: 0.7;
   transition: 0.8s all ease-out;
+
   &:hover {
     opacity: 1.0;
   }
@@ -41,18 +42,18 @@ export const ContainerCard = styled.div`
 `;
 
 export const ContainerCatalog = styled.div`
-display: flex;
-flex-direction: column;
-
-.cards {
   display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-}
+  flex-direction: column;
 
-@media screen and (max-width: 768px) {
-  padding: 0;
-}
+  .cards {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 0;
+  }
 `;
 
 export const StyledModal = styled(Modal)`

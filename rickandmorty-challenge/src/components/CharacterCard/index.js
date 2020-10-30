@@ -1,5 +1,6 @@
 import { ContainerCard, StyledModal, useStyles, Button, LoadingGif, ImageCard } from "../../styles";
 import { getCharacterById } from "../../graphql/requests";
+import Gif from "../../assets/gif-loading.gif";
 import { useState } from "react";
 
 function CharacterCard(props) {
@@ -23,7 +24,7 @@ function CharacterCard(props) {
     return (
         <ContainerCard>
 
-            {loading && <LoadingGif alt="loading..." src={"https://i.imgur.com/GLdqYB2.gif"} />};
+            {loading && <LoadingGif alt="loading..." src={Gif} />};
 
             <ImageCard alt={props.name} src={props.img} />
 
@@ -46,11 +47,9 @@ function CharacterCard(props) {
                     </h4>
 
                     <ul className="episodes">
-                        {characterInfo.episode &&
-                            characterInfo.episode.map((ep) => {
-                                return <li key={ep.name}>{ep.name}</li>
-                            })
-                        }
+                        {characterInfo.episode && characterInfo.episode.map((ep) => {
+                            return <li key={ep.name}>{ep.name}</li>
+                        })};
                     </ul>
 
                     <Button onClick={closeModal}>Go back</Button>

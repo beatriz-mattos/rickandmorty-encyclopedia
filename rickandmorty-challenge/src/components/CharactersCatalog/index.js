@@ -18,17 +18,16 @@ function CharactersCatalog() {
         <ContainerCatalog>
             <Logo src={LogoRickAndMorty} alt="Logo Rick and Morty" />
             <div className="cards">
-                {characters &&
-                    characters.map((character) => {
-                        return (
-                            <CharacterCard
-                                id={character.id}
-                                img={character.image}
-                                name={character.name}
-                                status={character.status}
-                            />
-                        );
-                    })}
+                {characters && characters.map((character) => {
+                    return (
+                        <CharacterCard
+                            id={character.id}
+                            img={character.image}
+                            name={character.name}
+                            status={character.status}
+                        />
+                    );
+                })};
             </div>
 
         </ContainerCatalog>
