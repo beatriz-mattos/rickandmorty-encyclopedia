@@ -26,3 +26,30 @@ export const getCharacters = async () => {
         console.error("Error: ", err)
     };
 };
+
+export const getCharacterById = async (id) => {
+    try {
+        const response = await api
+            ({
+                api,
+                method: "post",
+                data: {
+                    query: `{
+                        character(id: ${id}) {
+                            id
+                            image
+                            name
+                            episode {
+                                name
+                            }
+                        }
+                    }`
+                },
+            });
+
+        return response.data.data.character;
+        
+    } catch (err) {
+        console.error("Error: ", err);
+    }
+};

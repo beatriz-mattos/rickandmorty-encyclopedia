@@ -1,7 +1,8 @@
 import CharacterCard from "../CharacterCard";
-import { ContainerCatalog } from "../../styles";
+import { Logo, ContainerCatalog } from "../../styles";
 import { getCharacters } from "../../graphql/requests";
 import { useState, useEffect } from "react";
+import LogoRickAndMorty from "../../assets/rm-logo.png"
 
 function CharactersCatalog() {
     const [characters, setCharacters] = useState([]);
@@ -15,6 +16,7 @@ function CharactersCatalog() {
 
     return (
         <ContainerCatalog>
+            <Logo src={LogoRickAndMorty} alt="Logo Rick and Morty" />
             <div className="cards">
                 {characters &&
                     characters.map((character) => {
