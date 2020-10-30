@@ -1,8 +1,8 @@
 import api from "../services/api";
 
-export const getCharacters = () => async () => {
+export const getCharacters = async () => {
     try {
-        await api
+        const response = await api
             ({
                 api,
                 method: "post",
@@ -17,13 +17,12 @@ export const getCharacters = () => async () => {
                             }
                         }
                     }`
-                }
-
-            })
-            .then((res) => {
-                console.log(res.data.data)
+                },
             });
+
+        return response.data.data.characters.results;
+
     } catch (err) {
-        console.error("Error:", err)
+        console.error("Error: ", err)
     };
 };
