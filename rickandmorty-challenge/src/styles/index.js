@@ -8,6 +8,12 @@ export const Logo = styled.img`
   padding-bottom: 1em;
 `;
 
+export const ImageCard = styled.img`
+border-radius: 15px 15px 0px 0px;
+  width: 100%;
+  min-width: 100%;
+`;
+
 export const ContainerCard = styled.div`
   display: flex;
   flex-direction: column;
@@ -21,12 +27,6 @@ export const ContainerCard = styled.div`
   transition: 0.8s all ease-out;
   &:hover {
     opacity: 1.0;
-  }
-
-  img {
-    border-radius: 15px 15px 0px 0px;
-    width: 100%;
-    min-width: 100%;
   }
 
   .character-info {
@@ -92,6 +92,20 @@ export const Button = styled.button`
     font-weight: bolder;
     letter-spacing: 1px;
   }
+`;
+
+export const LoadingGif = styled.img`
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  object-fit: fill;
+  max-width:50px;
+  max-height:50px;
+  background: no-repeat center; 
+  background-size: cover;
 `;
 
 export const useStyles = makeStyles((theme) => ({
