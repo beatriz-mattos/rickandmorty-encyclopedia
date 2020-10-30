@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import Modal from "@material-ui/core/Modal";
 import { makeStyles } from "@material-ui/core/styles";
-//import Pagination from '@material-ui/lab/Pagination';
 
 export const Logo = styled.img`
   max-width: 50%;
